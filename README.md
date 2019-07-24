@@ -1,8 +1,25 @@
-# multi turn prompt sample
+# Service Desk Chatbot
 
 Bot Framework v4 multi-turn prompt bot sample
 
 This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to use the prompts classes included in `botbuilder-dialogs`.  This bot will ask for the user's name and age, then store the responses. It demonstrates a multi-turn dialog flow using a text prompt, a number prompt, and state accessors to store and retrieve values.
+
+## Knowledge base
+
+Keep your knowledge organized as a YAML file.
+
+```yml
+- Topic: topic
+  Question: question
+  Answer: |
+    "long answer"
+```
+
+Then you can use the converter script to convert the YAML file to a knowledge base TSV file for QnA Maker.
+
+```sh
+$ python ./scripts/convert_yaml_to_kb.py <path_to_input_yaml_file> <path_to_output_tsv_file>
+```
 
 ## Prerequisites
 
